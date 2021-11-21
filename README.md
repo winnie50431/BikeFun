@@ -1,70 +1,149 @@
-# Getting Started with Create React App
+### 學習筆記
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+頁面結構
 
-In the project directory, you can run:
+- 首頁 11.16 completed
+- Routepage 探索路線
 
-### `npm start`
+  - SearchRoute 搜尋路線 11.18 completed
+  - ResultRoute 搜尋結果
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    - Card
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    【取得自行車道路線】
 
-### `npm test`
+    1. 在 <Routepage/> 設定取得資料的 _onFunction_ 和資料的 **state**。
+    2. _onFunction_ 傳入 <SearchRoute/> ，每當輸入 select&input 執行 _onFunction_。
+    3. 將 <Routepage/> 取得的資料 **state**，當作 **props** 傳入 <ResultRoute/> -> <Card/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Stationpage 尋找站點
 
-### `npm run build`
+  - SearchStation 搜尋站點 (switch/city/keywords)
+  - ResultStation 搜尋結果
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    - Map (座標)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  (dafault) show <Banner/> & <SearchStation/>
+  (state 1.)
+  if ( input#navigator || button.onClick )
+  <Map/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  (功能 1.) 開定位 -> 顯示附近站點
+  (功能 2.) 搜尋 -> 關定位&顯示搜尋站點
 
-### `npm run eject`
+  營運狀態(暫停-白): /v2/Bike/Availability/{City}
+  車位(正常-綠/暫停-白): /v2/Bike/Availability/{City}
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  【取得定位】
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  1. 在 <Stationpage/> 設定取得資料的 _onFunction_ 和 定位 input.checkbox 的 **state**。
+  2. _onFunction_ 傳入 <SearchRoute/> ，每當輸入 select&input 執行 _onFunction_。
+  3. 將 <Routepage/> 取得的資料 **state**，當作 **props** 傳入 <ResultRoute/> -> <Card/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### **應用的函式庫**
 
-## Learn More
+- [react-router-dom](https://github.com/remix-run/react-router/blob/main/docs/getting-started/tutorial.md) : SPA 用路由
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  1. connect your app to the browser's URL: import `BrowserRouter`
+  2. import `Link` and add some global navigation
+  3. import {
+     BrowserRouter,
+     Routes,
+     Route
+     } from "react-router-dom";
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [jsSHA](https://www.npmjs.com/package/jssha): tdx api 驗證用
+- [fontawesome](https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react): 素材
+- [leaflet](https://leafletjs.com/download.html)
+- (未使用)[react-leaflet](https://react-leaflet.js.org/docs/start-installation/)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**可能會犯的錯誤**
 
-### Analyzing the Bundle Size
+- 圖片引入方式: import 進 react ; src 不能引入 https
+- \_scss 引入不用加檔名
+- 字體用 @import: url() 引入 scss
+- .env
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  - **token 的隱藏方式**
 
-### Making a Progressive Web App
+  1. 不用輸入;分號當句尾
+  2. 注意取名&呼叫方式
+  3. 修改後要重新運行 npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  - **leaflet**
+  - \*刪除 node_modules/的.cache/ [react-leaflet 修復](https://stackoverflow.com/questions/67552020/how-to-fix-error-failed-to-compile-node-modules-react-leaflet-core-esm-pat)
 
-### Advanced Configuration
+  - 錯誤訊息:
+  - [Error: Map container not found](https://stackoverflow.com/questions/42647735/leaflet-map-container-not-found)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    ```
+    The div id="map" must be added to the dom before calling L.map('map').
+    ```
 
-### Deployment
+    可以用 `useEffect` 解決( 生命週期: 先 render 後 ComponentDidMount )
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  - [Error: Map container is already initialized.](https://stackoverflow.com/questions/19186428/refresh-leaflet-map-map-container-is-already-initialized)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### 常用
+
+- .env : **token 的隱藏方式**
+- helper.js : **global function**
+
+- **flex**
+
+  ```
+  .flex_container {
+    width: ??rem;
+  }
+  .flex_item {
+          // 放大不超過350px
+          flex: 1 1 100%;
+          max-width: 350px;
+  }
+  ```
+
+  ```
+  .flex_item {
+      // 最小多寬；以上放大
+      flex: 0 1 30%; // 一排三個
+      height: 15vw;
+      min-width: 200px; // > 200px時放大
+  }
+  ```
+
+  優先級
+
+  flex-basis > min-width > width > max-width
+  ( or _height_ whenever flex-direction: column )
+  ( except flex-basis: auto)
+
+- **arr.map()**
+
+  ```
+  let new_array = arr.map(function callback( currentValue[, index[, array]]) {
+      // return element for new_array
+  }[, thisArg])
+  ```
+
+- **useEffect**
+
+  1. 資料 fetch、設定 subscription、或手動改變 React component 中的 DOM 都是 side effect。
+  2. 告訴 React 你的 component 需要在 render 後做一些事情。React 將記住你傳遞的 function（我們將其稱為「effect」），並在執行 DOM 更新之後呼叫它。
+  3. 每次 render 後都會執行 useEffect; 在第一個 render 和隨後每一個更新之後執行。
+
+```
+
+```
+
+參考資料:
+
+- [使用 Effect Hook – React](https://zh-hant.reactjs.org/docs/hooks-effect.html)
+- [proto.io(滑動開關產生器)](https://proto.io/freebies/onoff/)

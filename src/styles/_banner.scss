@@ -1,0 +1,50 @@
+div.banner_background {
+  background-position: center;
+  background-size: cover;
+  // min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.home_banner {
+    background-image: url(../images/bg01.jpg);
+    min-height: 80vh;
+  }
+  &.route_banner {
+    background-image: url(../images/bg02.jpg);
+    height: 20vh;
+  }
+  &.station_banner {
+    background-image: url(../images/bg03.jpg);
+    width: 60%;
+    min-height: 80vh;
+    float: inline-start;
+  }
+  div.title_container {
+    margin: 0px auto;
+    width: 50%;
+    img {
+      width: 80%;
+    }
+    h1 {
+      color: #fff;
+      font-size: 1.25rem;
+      text-align: end;
+      letter-spacing: 0.15em;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  div.banner_background {
+    div.title_container {
+      width: 80%;
+      img {
+        width: 100%;
+      }
+      h1 {
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}
