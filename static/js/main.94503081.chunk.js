@@ -1,0 +1,2 @@
+(this.webpackJsonpweek2=this.webpackJsonpweek2||[]).push([[0],{29:function(e,t,c){},30:function(e,t,c){"use strict";c.r(t);var n=c(1),r=c.n(n),p=c(14),s=c.n(p),i=c(3),j=(c(5),c(6),c.p,c(0));c.p,c.p,c.p,c.p,c.p,c.p,c(7),c(9),c(4),c(28),c(13),c(16),c(15),c(29);var a=function(){return Object(j.jsx)("div",{className:"App",children:Object(j.jsx)("h1",{children:"Try git"})})};s.a.render(Object(j.jsx)(r.a.StrictMode,{children:Object(j.jsx)(i.a,{children:Object(j.jsx)(a,{})})}),document.getElementById("root"))}},[[30,1,2]]]);
+//# sourceMappingURL=main.94503081.chunk.js.map
