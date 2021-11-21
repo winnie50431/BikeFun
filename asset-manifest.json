@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/BikeFun/static/css/main.e84adb3d.chunk.css",
+    "main.js": "/BikeFun/static/js/main.be2b4ee4.chunk.js",
+    "main.js.map": "/BikeFun/static/js/main.be2b4ee4.chunk.js.map",
+    "runtime-main.js": "/BikeFun/static/js/runtime-main.b7f43764.js",
+    "runtime-main.js.map": "/BikeFun/static/js/runtime-main.b7f43764.js.map",
+    "static/css/2.68ba508b.chunk.css": "/BikeFun/static/css/2.68ba508b.chunk.css",
+    "static/js/2.067dcb9e.chunk.js": "/BikeFun/static/js/2.067dcb9e.chunk.js",
+    "static/js/2.067dcb9e.chunk.js.map": "/BikeFun/static/js/2.067dcb9e.chunk.js.map",
+    "index.html": "/BikeFun/index.html",
+    "static/css/2.68ba508b.chunk.css.map": "/BikeFun/static/css/2.68ba508b.chunk.css.map",
+    "static/css/main.e84adb3d.chunk.css.map": "/BikeFun/static/css/main.e84adb3d.chunk.css.map",
+    "static/js/2.067dcb9e.chunk.js.LICENSE.txt": "/BikeFun/static/js/2.067dcb9e.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/BikeFun/static/media/bg03.6ab10dfa.jpg",
+    "static/media/boyWithRoute.b0c5b16d.png": "/BikeFun/static/media/boyWithRoute.b0c5b16d.png",
+    "static/media/index_busStation.d5d9ded8.jpg": "/BikeFun/static/media/index_busStation.d5d9ded8.jpg",
+    "static/media/index_news01.68fa2634.jpg": "/BikeFun/static/media/index_news01.68fa2634.jpg",
+    "static/media/index_news02.b1c72705.jpg": "/BikeFun/static/media/index_news02.b1c72705.jpg",
+    "static/media/index_route.0b20cea4.jpg": "/BikeFun/static/media/index_route.0b20cea4.jpg",
+    "static/media/logo_white.aabe6bbd.png": "/BikeFun/static/media/logo_white.aabe6bbd.png",
+    "static/media/logo_yellow.67f6e353.png": "/BikeFun/static/media/logo_yellow.67f6e353.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b7f43764.js",
+    "static/css/2.68ba508b.chunk.css",
+    "static/js/2.067dcb9e.chunk.js",
+    "static/css/main.e84adb3d.chunk.css",
+    "static/js/main.be2b4ee4.chunk.js"
+  ]
+}
