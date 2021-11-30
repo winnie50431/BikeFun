@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/BikeFun/static/css/main.e84adb3d.chunk.css",
-    "main.js": "/BikeFun/static/js/main.27111e3b.chunk.js",
-    "main.js.map": "/BikeFun/static/js/main.27111e3b.chunk.js.map",
+    "main.js": "/BikeFun/static/js/main.6f4f37cc.chunk.js",
+    "main.js.map": "/BikeFun/static/js/main.6f4f37cc.chunk.js.map",
     "runtime-main.js": "/BikeFun/static/js/runtime-main.b7f43764.js",
     "runtime-main.js.map": "/BikeFun/static/js/runtime-main.b7f43764.js.map",
     "static/css/2.68ba508b.chunk.css": "/BikeFun/static/css/2.68ba508b.chunk.css",
@@ -26,6 +26,6 @@
     "static/css/2.68ba508b.chunk.css",
     "static/js/2.067dcb9e.chunk.js",
     "static/css/main.e84adb3d.chunk.css",
-    "static/js/main.27111e3b.chunk.js"
+    "static/js/main.6f4f37cc.chunk.js"
   ]
 }
